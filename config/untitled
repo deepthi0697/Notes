@@ -1,0 +1,25 @@
+Employee
+    name:,
+    code:,
+    emaill:,
+    deleted: {   (soft deleted)
+        type: boolean,
+        default: false
+    }
+
+app.get('/employyes', (req, res) => {
+    Employee.find({deleted: false})
+})
+
+app.get('/employyes/deleted', (req, res) => {
+    Employee.find({deleted: true})
+})
+
+//GET /employees/type?=deleted
+app.get('/employyes', (req, res) => {
+    const type = req.query.type   
+    Employee.find({deleted: true})
+})
+
+
+=> whenever we have to run our own script then we have to use npm run

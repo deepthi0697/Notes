@@ -1,0 +1,28 @@
+1.npm init
+2.npm install express
+3. setup server using express.js(create index.js)
+4. establishing database connextion: a) install mongoose
+                                     b) require mongoose
+                                                           
+5. After setting up the database 
+6.create a schema and then create a model 
+7. ODM - Object Document model  (nosql db)
+    * map a model to a collection (note -> notes)
+    * map an object to a documment (saving of note)
+    * map a property to a document's field
+
+    ORM - (sequalise)
+    * map a model to a table
+    * map an object to a row
+    * map a property to a column
+
+*******************************************************************************************************************
+USER AUTHENTICATION
+1. Register user with encrypted password.
+2. Find user by email & then compare passwords and generate token after logging in.
+3. after generating, set that token in the header.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+user1100 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTU5MDkxZGQxYzIyMTA4YTgwODYwNTQiLCJuYW1lIjoidXNlcjExMDAiLCJjcmVhdGVkQXQiOjE1ODMyMTMxNjE3OTEsImlhdCI6MTU4MzIxMzE2MX0.Womt1Qxs1MN3FMDGUFmYuvUpuRe7YZriYpgjTZnETSM

@@ -1,0 +1,11 @@
+1. create config
+    1. database.js
+    2. routes.js
+
+2. create app
+    1.controllers
+        a. notesController.js,
+        b. CategoriesController.js
+    2. models
+        a. Note
+        b. Category
