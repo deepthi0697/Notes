@@ -21,18 +21,29 @@ function App(){
                         localStorage.getItem('authKey') ? 
                         (
                             <div>
-                                    <Link to ='/account'>Account</Link>{' '}
-                                    <Link to = '/notes'>Notes</Link>{' '}
-                                    <Link to = '/logout'>Logout</Link>
+                                <nav>
+                                    <div className = "nav-wrapper">
+                                    {/* <a href="#" class="brand-logo">Logo</a> */}
+                                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                                        <li><Link to ='/account'>Account</Link></li>
+                                        <li>  <Link to = '/notes'>Notes</Link></li>
+                                        <li><Link to = '/logout'>Logout</Link></li>
+                                    </ul>
+                                    </div>
+                                </nav>
                             </div>
 
                         ) :  
                         (
-                            <div>      
-                                <Link to = '/login'>Login</Link>||
-                                <Link to='/register'>Register</Link>
-                                <Redirect to ='/'/>
-                            </div>
+                            <nav>
+                                 <div className = "nav-wrapper">  
+                                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                                        <li><Link to = '/login'>Login</Link></li>
+                                        <li><Link to='/register'>Register</Link></li>
+                                        <li><Redirect to ='/'/></li>
+                                    </ul>    
+                                </div>
+                            </nav>
                         )   
                     } 
                     <Switch>

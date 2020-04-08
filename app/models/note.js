@@ -19,9 +19,13 @@ const noteSchema = new Schema({
         required: true,
         ref: 'Category' //here we are giving reference to the model name
     },
-    image: {
-        type: String
+    isEditable: {
+        type: Boolean,
+        default: false
     }
+    // image: {
+    //     type: String
+    // }
 }) 
 
 const Note = mongoose.model('Note', noteSchema)

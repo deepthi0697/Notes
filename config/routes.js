@@ -4,7 +4,7 @@ const notesController = require('../app/controllers/notesController')
 const categoriesController = require('../app/controllers/categoriesController')
 const userController = require('../app/controllers/userAuthController')
 const authenticateUser = require('../app/middlewares/authenticate')
-const uploadController = require('../app/controllers/uploadController')
+//const uploadController = require('../app/controllers/uploadController')
 
 router.get('/notes', authenticateUser, notesController.list)
 router.get('/notes/:id', authenticateUser,notesController.show)
@@ -22,10 +22,10 @@ router.post('/categories', authenticateUser, categoriesController.create)
 router.put('/categories/:id', authenticateUser, categoriesController.update)
 router.delete('/categories/:id', authenticateUser,categoriesController.delete)
 
-router.post('/upload',(req,res,next)=>{
-    console.log('in middleware')
-    next()
-} ,uploadController.upload )
+// router.post('/upload',(req,res,next)=>{
+//     console.log('in middleware')
+//     next()
+// } ,uploadController.upload )
 
 
 module.exports = router

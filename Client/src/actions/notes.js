@@ -47,3 +47,51 @@ export const startPostNote = (formData) => {
         })
     }
 }
+
+export const editNote = (note) => {
+    return {
+        type: 'EDIT_NOTE',
+        payload: note
+    }
+}
+
+export const startEditNote = (id,data) => {
+    return(dispatch) => {
+        axios.put(`/notes/${id}`, data, {
+            headers: {
+                'x-auth': localStorage.getItem('authKey')
+            }
+        })
+        .then((response) => {
+            const note = response.data
+            dispatch(editNote(note))
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+}
+
+export const deleteNote = (note) => {
+    return {
+        type: 'DELETE_NOTE',
+        payload: note
+    }
+}
+
+export const startDeleteNote = (id) => {
+    return(dispatch) => {
+        axios.delete(`/notes/${id}`, {
+            headers : {
+                'x-auth': localStorage.getItem('authKey')
+            }
+        })
+        .then((response) => {
+            const note = response.data
+            dispatch(deleteNote(note))
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+}
