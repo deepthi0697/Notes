@@ -48,10 +48,13 @@ export const startPostNote = (formData) => {
     }
 }
 
-export const editNote = (note) => {
+export const editNote = (note, id) => {
     return {
         type: 'EDIT_NOTE',
-        payload: note
+        payload: {
+            'data': note,
+            'id':id
+        }
     }
 }
 
@@ -64,7 +67,7 @@ export const startEditNote = (id,data) => {
         })
         .then((response) => {
             const note = response.data
-            dispatch(editNote(note))
+            dispatch(editNote(note, id))
         })
         .catch((err) => {
             console.log(err)
