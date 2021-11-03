@@ -27,6 +27,6 @@
     "reactjs-popup": "^1.5.0",
     "readme-md-generator": "^1.0.0",
     "validate": "^5.1.0",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   }
 }
